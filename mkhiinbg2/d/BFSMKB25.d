@@ -9,10 +9,10 @@ See("BFSMK")
 CombatCounter(0)  
 !See([ENEMY])  
 Global("BFSMkAerieToB1","GLOBAL",0)~ THEN BAERIE25 BFSMkAerieToB1  
-~All this death, all this destruction... Sometimes it feels as though the world has forgotten how to be kind.~  
+@0  
 DO ~SetGlobal("BFSMkAerieToB1","GLOBAL",1)~  
-== BFSMKB25 ~It hasn't. Good dirt still sleeps under the ashes. One day calm will return.~  
-== BAERIE25 ~Then I hope we both live to see it.~  
+== BFSMKB25 @1  
+== BAERIE25 @2  
 EXIT
 
 /* Anomen, Lawful Good 
@@ -27,11 +27,11 @@ CombatCounter(0)
 Alignment("Anomen",LAWFUL_GOOD)
 !GlobalGT("BFSMkPlanesTalk","GLOBAL",1)
 Global("BFSMkAnomenToB1","GLOBAL",0)~ THEN BANOME25 BFSMkAnomenToB1  
-~The end draws ever closer. What will you do when the battles are over, M'Khiin?~  
+@3  
 DO ~SetGlobal("BFSMkAnomenToB1","GLOBAL",1)~  
-== BFSMKB25 ~You think there's an after for someone like me? Goblins don't get happy endings. I'll wander on, with <CHARNAME> if <PRO_HESHE> will let me. Same as I always have.~  
-== BANOME25 ~That's a grim way to live. Have you never wished for more?~  
-== BFSMKB25 ~I count the steps, not the path. One foot forward. Then the next.~
+== BFSMKB25 @4  
+== BANOME25 @5  
+== BFSMKB25 @6
 EXIT  
 
 /* Anomen, Lawful Good
@@ -46,11 +46,11 @@ CombatCounter(0)
 Alignment("Anomen",LAWFUL_GOOD)
 GlobalGT("BFSMkPlanesTalk","GLOBAL",1)
 Global("BFSMkAnomenToB1","GLOBAL",0)~ THEN BANOME25 BFSMkAnomenToB1  
-~The end draws ever closer. What will you do when the battles are over, M'Khiin?~  
+@3  
 DO ~SetGlobal("BFSMkAnomenToB1","GLOBAL",1)~  
-== BFSMKB25 ~Been thinking I might walk the planes. See what else is out there. Find other goblins.~
-== BANOME25 ~That is no small undertaking.~  
-== BFSMKB25 ~Doesn't have to be, just has to be worthwhile.~
+== BFSMKB25 @7
+== BANOME25 @8  
+== BFSMKB25 @9
 EXIT  
 
 /* Cernd */
@@ -62,10 +62,10 @@ See("Cernd")
 CombatCounter(0)  
 !See([ENEMY])  
 Global("BFSMkCerndToB1","GLOBAL",0)~ THEN BFSMKB25 BFSMkCerndToB1  
-~Wind's been carrying cryptic whispers lately. Grief, maybe?~  
+@10  
 DO ~SetGlobal("BFSMkCerndToB1","GLOBAL",1)~  
-== BCERND25 ~I hear the fury of the earth, burdened and weary of this ceaseless bloodshed. A warning, and a plea, for those still willing to listen.~  
-== BFSMKB25 ~Then we stay sharp. No resting when a storm's this close.~
+== BCERND25 @11  
+== BFSMKB25 @12
 EXIT 
 
 /* Edwin */
@@ -77,10 +77,10 @@ See("BFSMK")
 CombatCounter(0)  
 !See([ENEMY])  
 Global("BFSMkEdwinToB1","GLOBAL",0)~ THEN BEDWIN25 BFSMkEdwinToB1  
-~Soon. Soon I shall ascend to my rightful station and leave this ridiculous band behind.~  
+@13  
 DO ~SetGlobal("BFSMkEdwinToB1","GLOBAL",1)~  
-== BFSMKB25 ~Good. Fewer flies for me to swat.~  
-== BEDWIN25 ~Insolence! Truly, I walk among lesser creatures...~
+== BFSMKB25 @14  
+== BEDWIN25 @15
 EXIT 
 
 
@@ -91,16 +91,16 @@ See("HaerDalis")
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 !StateCheck("BFSMK",CD_STATE_NOTVALID)
 Global("BFSMKHaerDalisToB1","GLOBAL",0)~ THEN BFSMKB25 BFS.MkHaerDalisToB1
-~What's Sigil like?~
+@16
 DO ~SetGlobal("BFSMKHaerDalisToB1","GLOBAL",1)~
-== BHAERD25 ~What stirs such curiosity in you now, pigeon?~
-== BFSMKB25 ~Ain't here, it's out there. And I've only ever known it here. So what's it like?~
-== BHAERD25 ~There's never a dull moment. Devils, fresh from the Blood War, saunter into taverns still carrying the scent of brimstone. Angels descend from Mount Celestia to cure what ails they can.~
-== BHAERD25 ~They both co-exist while the Dabus sweep the streets, and bury more mysteries beneath layers of cobblestone.~
-== BHAERD25 ~Sigil defies knowing. Therein lies its charm.~  
-== BFSMKB25 ~What of the people? Do they all fit in?~  
-== BHAERD25 ~Fit in? No, pigeon. But stand out? Rarely. Even the most peculiar find their place within its embrace.~  
-== BFSMKB25 ~I'd like to visit a place like that. Maybe someday.~
+== BHAERD25 @17
+== BFSMKB25 @18
+== BHAERD25 @19
+== BHAERD25 @20
+== BHAERD25 @21  
+== BFSMKB25 @22  
+== BHAERD25 @23  
+== BFSMKB25 @24
 EXIT
 
 /* Imoen */
@@ -110,13 +110,13 @@ See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("BFSMK",CD_STATE_NOTVALID)
 Global("BFSMKImoenToB1","GLOBAL",0)~ THEN BFSMKB25 BFS.MkImoenToB1
-~Nightmares still haunting you?~
+@25
 DO ~SetGlobal("BFSMKImoenToB1","GLOBAL",1)~
-== BIMOEN25 ~The tossing and turning gave that away, huh? Every night is the same: <CHARNAME> screaming, Irenicus binding us with chains, the whisper of blood and... Waking up's the only mercy.~
-== BFSMKB25 ~You can't keep avoiding what you are.~ 
-== BIMOEN25 ~I get that. Trust me, I do.~ 
-== BFSMKB25 ~Take this. Tastes like dirt but it'll knock you out. No dreams, no nightmares.~ 
-== BIMOEN25 ~Worth a shot, I guess. Thanks for caring, M'Khiin.~
+== BIMOEN25 @26
+== BFSMKB25 @27 
+== BIMOEN25 @28 
+== BFSMKB25 @29 
+== BIMOEN25 @30
 EXIT
 
 /* Jaheira */ 
@@ -128,13 +128,13 @@ See("Jaheira")
 CombatCounter(0)
 !See([ENEMY])
 Global("BFSMkJaheiraToB1","GLOBAL",0)~ THEN BFSMKB25 BFSMkJaheiraToB1
-~You've lost more than most. But you keep moving. Most would've broken by now.~ 
+@31 
 DO ~SetGlobal("BFSMkJaheiraToB1","GLOBAL",1)~
-== BJAHEI25 ~Was there intended to be a question in there?~
-== BJAHEI25 ~*sigh* I remain with <CHARNAME> because I believe that what we do matters. That it *must* matter.~ 
-== BFSMKB25 ~...or the dead would make for bad company.~
-== BJAHEI25 ~What about you? You have no personal stake in <CHARNAME>'s fight.~
-== BFSMKB25 ~Might be I'm just stubborn. Might be I don't have much to lose.~ 
+== BJAHEI25 @32
+== BJAHEI25 @33 
+== BFSMKB25 @34
+== BJAHEI25 @35
+== BFSMKB25 @36 
 EXIT
 
 /* Jan */
@@ -146,13 +146,13 @@ See("BFSMK")
 CombatCounter(0)
 !See([ENEMY])
 Global("BFSMkJanToB1","GLOBAL",0)~ THEN BJAN25 BFSMkJanToB1
-~Tell me, M'Khiin, do goblins have traditional cuisine?~ 
+@37 
 DO ~SetGlobal("BFSMkJanToB1","GLOBAL",1)~
-== BFSMKB25 ~No. We eat what we find, then hope we don't die from it.~
-== BFSMKB25 ~I only learned how to make a proper stew after leaving my tribe.~
-== BJAN25 ~A balanced diet is important, I'll have you know. Perhaps I can interest you in some boiled turnips? I've been working on a new cookbook, sure to be a bestseller, and...~ 
-== BFSMKB25 ~Always about the turnips with you.~ 
-== BJAN25 ~*sigh* A genius is often misunderstood in their time.~ 
+== BFSMKB25 @38
+== BFSMKB25 @39
+== BJAN25 @40 
+== BFSMKB25 @41 
+== BJAN25 @42 
 EXIT
 
 /* Imoen 2
@@ -163,9 +163,9 @@ See("BFSMK")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("BFSMK",CD_STATE_NOTVALID)
 Global("BFSMKImoenToB2","GLOBAL",0)~ THEN BIMOEN25 BFS.MkImoenToB2
-~Some nights I can still hear his voice. Irenicus, I mean. Like he's whispering in my head.~
+@43
 DO ~SetGlobal("BFSMKImoenToB2","GLOBAL",1)~
-== BFSMKB25 ~Ghosts linger. Even the ones that aren't real.~ 
-== BIMOEN25 ~Do they *ever* disappear?~ 
-== BFSMKB25 ~Sometimes. Sometimes you learn to snarl back louder than they do.~ 
+== BFSMKB25 @44 
+== BIMOEN25 @45 
+== BFSMKB25 @46 
 EXIT
